@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: verdana, sans-serif;
+    color: black;
+    font-size: 18px;
+    position: relative;
+    background: url(img/ssscribble.svg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: black; /* Fond noir */
+    color: white; /* Texte en blanc */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    padding: 15px 25px;
+    color: white; /* Texte en blanc */
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a3183f;
+    background-color: #f8f8f8;
+}
+
+main {
+    min-height: 100vh;
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section,
+article {
+    margin: 25px 0;
+}
+
+img {
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 0;
+    object-fit: cover;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    outline: 0;
+}
+
+button {
+    width: 90px;
+    cursor: pointer;
+    color: #a3183f;
+    background-color: transparent;
+    border: 0;
+}
+
+div {
+    color: #000000;
+    padding: 20px;
+    border: 2px solid #dddcdc;
+    background-color: #f8f8f8;
+    margin: 10px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    animation: identifier 0.5s ease-out;
+}
+
+p {
+    margin-top: 5px;
+}
+
+span,
+a {
+    color: #a3183f;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px 0;
+    background-color: #e7e7eaf9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes identifier {
+    from {
+        transform: translateY(100px);
+    }
+}
+
+.carte-pays {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carte-pays img {
+    max-width: 40px;
+    margin: 0;
+}
+
+.question-recherche {
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.infos-liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    width: 100%;
+}
+
+#app {
+    width: 100%;
+}
+
+.tri {
+    display: flex;
+    gap: 30px;
+}
+
+.tri a {
+    font-weight: bold;
+}
+
+.weather {
+    background-color: #f5d2cd;
+}
+
+.carte {
+    max-width: 400px;
+    background-color: #fefefe;
+    margin: 0 auto;
+}
+
+.carte span {
+    font-weight: bold;
+}
